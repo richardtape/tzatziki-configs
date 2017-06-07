@@ -1,7 +1,7 @@
 ubccmsubcca:
     suites:
         default:
-            paths: [ %paths.base%/features/cms.ubc.ca/features ]
+            paths: [ %paths.base%/features/sites/cms.ubc.ca/ ]
             contexts:
                 - FeatureContext:
                     parameters: &FEATURECONTEXTPARAMSDEFAULTS
@@ -29,7 +29,7 @@ ubccmsubcca:
 ubccmsubccachrome:
     suites:
         default:
-            paths: [ %paths.base%/features/cms.ubc.ca/features ]
+            paths: [ %paths.base%/features/sites/cms.ubc.ca/ ]
             contexts:
                 - FeatureContext:
                     parameters: &FEATURECONTEXTPARAMSDEFAULTS
