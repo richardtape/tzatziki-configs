@@ -1,9 +1,9 @@
 default:
     autoload:
-        '': %paths.base%/features/bootstrap
+        '': %paths.base%/../../features/bootstrap
     suites:
         default:
-            paths: [ %paths.base%/features ]
+            paths: [ %paths.base%/../../features ]
             contexts:
                 - FeatureContext:
                     parameters: &FEATURECONTEXTPARAMSDEFAULTS
@@ -28,11 +28,11 @@ default:
             paths: false
             snippets: true
         html:
-          output_path: %paths.base%/build/html/behat
+          output_path: %paths.base%/../../build/html/behat
 ubccmsubcca:
     suites:
         default:
-            paths: [ %paths.base%/features/sites/cms.ubc.ca/ ]
+            paths: [ %paths.base%/../../features/sites/cms.ubc.ca/ ]
             contexts:
                 - FeatureContext:
                     parameters: &FEATURECONTEXTPARAMSDEFAULTS
@@ -56,11 +56,11 @@ ubccmsubcca:
             paths: false
             snippets: true
         html:
-          output_path: %paths.base%/build/html/behat/sites/cms.ubc.ca/firefox
+          output_path: %paths.base%/../../build/html/behat/sites/cms.ubc.ca/firefox
 ubccmsubccachrome:
     suites:
         default:
-            paths: [ %paths.base%/features/sites/cms.ubc.ca/ ]
+            paths: [ %paths.base%/../../features/sites/cms.ubc.ca/ ]
             contexts:
                 - FeatureContext:
                     parameters: &FEATURECONTEXTPARAMSDEFAULTS
@@ -85,4 +85,4 @@ ubccmsubccachrome:
             paths: false
             snippets: true
         html:
-          output_path: %paths.base%/build/html/behat/sites/cms.ubc.ca/chrome
+          output_path: %paths.base%/../../build/html/behat/sites/cms.ubc.ca/chrome
