@@ -1,4 +1,6 @@
 ubccmsubcca:
+  autoload:
+    '': %paths.base%/../../features/bootstrap
   suites:
     default:
       paths: [ %paths.base%/../../features/sites/cms.ubc.ca/ ]
@@ -27,6 +29,8 @@ ubccmsubcca:
     html:
       output_path: %paths.base%/../../build/html/behat/sites/cms.ubc.ca/firefox
 ubccmsubccachrome:
+  autoload:
+    '': %paths.base%/../../features/bootstrap
   suites:
     default:
       paths: [ %paths.base%/../../features/sites/cms.ubc.ca/ ]
