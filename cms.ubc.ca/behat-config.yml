@@ -1,88 +1,57 @@
-default:
-    autoload:
-        '': %paths.base%/../../features/bootstrap
-    suites:
-        default:
-            paths: [ %paths.base%/../../features ]
-            contexts:
-                - FeatureContext:
-                    parameters: &FEATURECONTEXTPARAMSDEFAULTS
-                        stage: staging
-                - Behat\MinkExtension\Context\MinkContext
-    extensions:
-        Behat\MinkExtension: &MINKEXTENSIONSDEFAULTS
-            base_url: https://richardtape.com/
-            goutte: ~
-            selenium2: ~
-            #browser_name: 'chrome'
-        emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension: &FORMATTEREXTENSIONDEFAULTS
-            name: html
-            renderer: Twig
-            file_name: index
-            print_args: true
-            print_outp: true
-            loop_break: true
-    formatters: &FORMATTERSSETTINGSDEFAULTS
-        pretty:
-            verbose: true
-            paths: false
-            snippets: true
-        html:
-          output_path: %paths.base%/../../build/html/behat
 ubccmsubcca:
-    suites:
-        default:
-            paths: [ %paths.base%/../../features/sites/cms.ubc.ca/ ]
-            contexts:
-                - FeatureContext:
-                    parameters: &FEATURECONTEXTPARAMSDEFAULTS
-                        stage: staging
-                - Behat\MinkExtension\Context\MinkContext
-    extensions:
-        Behat\MinkExtension: &MINKEXTENSIONSDEFAULTS
-            base_url: http://cms.ubc.ca/
-            goutte: ~
-            selenium2: ~
-        emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension: &FORMATTEREXTENSIONDEFAULTS
-            name: html
-            renderer: Twig
-            file_name: index
-            print_args: true
-            print_outp: true
-            loop_break: true
-    formatters: &FORMATTERSSETTINGSDEFAULTS
-        pretty:
-            verbose: true
-            paths: false
-            snippets: true
-        html:
-          output_path: %paths.base%/../../build/html/behat/sites/cms.ubc.ca/firefox
+  suites:
+    default:
+      paths: [ %paths.base%/../../features/sites/cms.ubc.ca/ ]
+      contexts:
+        - FeatureContext:
+            parameters:
+              stage: staging
+        - Behat\MinkExtension\Context\MinkContext
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://cms.ubc.ca/
+      goutte: ~
+      selenium2: ~
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig
+      file_name: index
+      print_args: true
+      print_outp: true
+      loop_break: true
+  formatters:
+    pretty:
+      verbose: true
+      paths: false
+      snippets: true
+    html:
+      output_path: %paths.base%/../../build/html/behat/sites/cms.ubc.ca/firefox
 ubccmsubccachrome:
-    suites:
-        default:
-            paths: [ %paths.base%/../../features/sites/cms.ubc.ca/ ]
-            contexts:
-                - FeatureContext:
-                    parameters: &FEATURECONTEXTPARAMSDEFAULTS
-                        stage: staging
-                - Behat\MinkExtension\Context\MinkContext
-    extensions:
-        Behat\MinkExtension: &MINKEXTENSIONSDEFAULTS
-            base_url: http://cms.ubc.ca/
-            goutte: ~
-            selenium2: ~
-            browser_name: 'chrome'
-        emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension: &FORMATTEREXTENSIONDEFAULTS
-            name: html
-            renderer: Twig
-            file_name: index
-            print_args: true
-            print_outp: true
-            loop_break: true
-    formatters: &FORMATTERSSETTINGSDEFAULTS
-        pretty:
-            verbose: true
-            paths: false
-            snippets: true
-        html:
-          output_path: %paths.base%/../../build/html/behat/sites/cms.ubc.ca/chrome
+  suites:
+    default:
+      paths: [ %paths.base%/../../features/sites/cms.ubc.ca/ ]
+      contexts:
+        - FeatureContext:
+            parameters:
+              stage: staging
+        - Behat\MinkExtension\Context\MinkContext
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://cms.ubc.ca/
+      goutte: ~
+      selenium2: ~
+      browser_name: 'chrome'
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig
+      file_name: index
+      print_args: true
+      print_outp: true
+      loop_break: true
+  formatters:
+    pretty:
+      verbose: true
+      paths: false
+      snippets: true
+    html:
+      output_path: %paths.base%/../../build/html/behat/sites/cms.ubc.ca/chrome
